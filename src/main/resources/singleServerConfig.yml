@@ -1,0 +1,28 @@
+---
+singleServerConfig:
+  idleConnectionTimeout: 10000
+  connectTimeout: 10000
+  timeout: 3000
+  retryAttempts: 3
+  retryInterval: 1500
+  password: null
+  subscriptionsPerConnection: 5
+  clientName: null
+  address: "redis://127.0.0.1:6379"
+  subscriptionConnectionMinimumIdleSize: 1
+  subscriptionConnectionPoolSize: 50
+  connectionMinimumIdleSize: 32
+  connectionPoolSize: 64
+  database: 0
+  dnsMonitoringInterval: 5000
+#This thread pool is shared by all RTopic object listeners, RRemoteService callers, and RExecutorService tasks.Default 2
+threads: 0
+#The number of threadpools is the number of threads stored in a Redisson instance, in all distributed data types and services it creates, and in the thread pool shared with the underlying clients.Default 2
+nettyThreads: 0
+# Encoding DefaultOrg.redisson.codec.JsonJacksonCodec
+codec: !<org.redisson.codec.JsonJacksonCodec> { }
+transportMode: NIO
+# Distributed lock automatic expiration time to prevent deadlocks, default 30000
+lockWatchdogTimeout: 30000
+# This parameter modifies whether messages come out in the order they are received by subscription publishing messages. If you choose whether messages will be processed in parallel, this parameter only applies to subscription publishing messages. Default true
+keepPubSubOrder: true
