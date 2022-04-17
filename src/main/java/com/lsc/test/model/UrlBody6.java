@@ -4,7 +4,7 @@ import javax.validation.constraints.NotBlank;
 
 public class UrlBody6 {
 
-    @NotBlank(message = "develop的id不能为空")
+    @NotBlank(message = "master的id不能为空7777777777777777777")
     private String id;
 
     @NotBlank(message = "id1不能为空")
